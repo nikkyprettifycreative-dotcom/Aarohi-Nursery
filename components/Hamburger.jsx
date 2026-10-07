@@ -11,100 +11,100 @@ export default function Hamburger() {
     const menuItems = [
     {
       id: 1,
-      title: 'Corporate',
+      title: 'Indoor Plants',
       subitems: [
-        'Corporate Blazzers',
-        'Corporate Female Dress',
-        'Corporate Female Kurti',
-        'Corporate Female Top',
-        'Corporate Shirt',
-        'Corporate T-Shirt',
-        'Corporate Trousers',
-        'Corporate Vest',
+        'Air Purifying Plants',
+        'Low Light Plants',
+        'Table Top Plants',
+        'Floor Plants',
+        'Hanging Plants',
+        'Bonsai Plants',
+        'Feng Shui Plants',
+        'Pet-Friendly Plants',
       ],
     },
     {
       id: 2,
-      title: 'Hotel',
+      title: 'Outdoor Plants',
       subitems: [
-        'Corporate Blazzers',
-        'Corporate Female Dress',
-        'Corporate Female Kurti',
-        'Corporate Female Top',
-        'Corporate Shirt',
-        'Corporate T-Shirt',
-        'Corporate Trousers',
-        'Corporate Vest',
+        'Flowering Plants',
+        'Fruit Plants',
+        'Shade Trees',
+        'Hedges & Shrubs',
+        'Climbers & Creepers',
+        'Ground Covers',
+        'Palm Trees',
+        'Bamboo Plants',
       ],
     },
     {
       id: 3,
-      title: 'SPA & Salon',
+      title: 'Flowering Plants',
       subitems: [
-        'Corporate Blazzers',
-        'Corporate Female Dress',
-        'Corporate Female Kurti',
-        'Corporate Female Top',
-        'Corporate Shirt',
-        'Corporate T-Shirt',
-        'Corporate Trousers',
-        'Corporate Vest',
+        'Rose Plants',
+        'Hibiscus',
+        'Jasmine (Mogra)',
+        'Bougainvillea',
+        'Marigold',
+        'Plumeria (Champa)',
+        'Lotus',
+        'Orchids',
       ],
     },
     {
       id: 4,
-      title: 'Industrial',
+      title: 'Medicinal & Herbal',
       subitems: [
-        'Corporate Blazzers',
-        'Corporate Female Dress',
-        'Corporate Female Kurti',
-        'Corporate Female Top',
-        'Corporate Shirt',
-        'Corporate T-Shirt',
-        'Corporate Trousers',
-        'Corporate Vest',
+        'Tulsi (Holy Basil)',
+        'Aloe Vera',
+        'Curry Leaf (Kadi Patta)',
+        'Mint (Pudina)',
+        'Lemongrass',
+        'Ashwagandha',
+        'Brahmi',
+        'Neem',
       ],
     },
     {
       id: 5,
-      title: 'Security',
+      title: 'Seeds & Bulbs',
       subitems: [
-        'Corporate Blazzers',
-        'Corporate Female Dress',
-        'Corporate Female Kurti',
-        'Corporate Female Top',
-        'Corporate Shirt',
-        'Corporate T-Shirt',
-        'Corporate Trousers',
-        'Corporate Vest',
+        'Flower Seeds',
+        'Vegetable Seeds',
+        'Herb Seeds',
+        'Fruit Seeds',
+        'Grass Seeds',
+        'Bulbs & Tubers',
+        'Seed Kits',
+        'Organic Seeds',
       ],
     },
     {
       id: 6,
-      title: 'Hospital',
+      title: 'Pots & Planters',
       subitems: [
-        'Corporate Blazzers',
-        'Corporate Female Dress',
-        'Corporate Female Kurti',
-        'Corporate Female Top',
-        'Corporate Shirt',
-        'Corporate T-Shirt',
-        'Corporate Trousers',
-        'Corporate Vest',
+        'Ceramic Pots',
+        'Terracotta Pots',
+        'Plastic Pots',
+        'Hanging Planters',
+        'Self-Watering Pots',
+        'Metal Planters',
+        'Wooden Planters',
+        'Wall Planters',
       ],
     },
     {
       id: 7,
-      title: 'By Profession',
+      title: 'Garden Care',
       subitems: [
-        'Corporate Blazzers',
-        'Corporate Female Dress',
-        'Corporate Female Kurti',
-        'Corporate Female Top',
-        'Corporate Shirt',
-        'Corporate T-Shirt',
-        'Corporate Trousers',
-        'Corporate Vest',
+        'Potting Soil',
+        'Fertilizers',
+        'Organic Manure',
+        'Neem Oil & Pesticides',
+        'Plant Growth Boosters',
+        'Watering Cans',
+        'Pruning Tools',
+        'Gardening Tools',
       ],
     },
   ];
@@ -157,19 +157,19 @@ export default function Hamburger() {
         </ul>
         <div className="bottom-list">
           <div className="social-icons">
-            <Link href="https://x.com/UniformBucket" target="_blank" title="Twitter">
+            <Link href="https://x.com" target="_blank" title="Twitter">
                 <Image src="/assets/icon/twitter.svg" width="25" height="25" alt="Social Icons"></Image>
             </Link>
-            <Link href="https://www.facebook.com/UniformBucket" target="_blank" title="Facebook">
+            <Link href="https://www.facebook.com" target="_blank" title="Facebook">
                 <Image src="/assets/icon/facebook.svg" width="25" height="25" alt="Social Icons"></Image>
             </Link>
-            <Link href="https://www.instagram.com/uniformbucket_official/?utm_source=qr&igshid=MThlNWY1MzQwNA%3D%3D" target="_blank" title="Instagram">
+            <Link href="https://www.instagram.com/" target="_blank" title="Instagram">
                 <Image src="/assets/icon/instagram.svg" width="25" height="25" alt="Social Icons"></Image>
             </Link>
-            <Link href="https://in.linkedin.com/company/uniformbucket" target="_blank" title="Linkedin">
+            <Link href="https://in.linkedin.com" target="_blank" title="Linkedin">
                 <Image src="/assets/icon/linkedin.svg" width="25" height="25" alt="Social Icons"></Image>
             </Link>
-            <Link href="https://api.whatsapp.com/send?phone=918285309609&text=Hello%20Team%20Uniform%20Bucket!%20I%20am%20interested%20in%20one%20of%20your%20Products.%20Please%20touch%20base%20with%20me." target="_blank" title="Whatsapp">
+            <Link href="https://api.whatsapp.com" target="_blank" title="Whatsapp">
                 <Image src="/assets/icon/whatsapp.svg" width="25" height="25" alt="Social Icons"></Image>
             </Link>
           </div>

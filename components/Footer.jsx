@@ -128,7 +128,7 @@ export default function Footer(){
             </footer>
             <Overlay />
             <div className={`sticky_action flex ${DisplayNonePage? 'display-none' : ""}`}>
-                <Link className="whatsapp" href="https://api.whatsapp.com/send?phone=918285309609&text=Hello%20Team%20Uniform%20Bucket!%20I%20am%20interested%20in%20one%20of%20your%20Products.%20Please%20touch%20base%20with%20me." target="_blank">
+                <Link className="whatsapp" href="" >
                     <Image src="/assets/icon/whatsapp.svg" width="24" height="24" alt="Whatsapp"></Image>
                 </Link>
                 <button className="call_action" onClick={openEnquire}>

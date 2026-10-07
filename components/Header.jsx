@@ -407,20 +407,24 @@ export default function Header(){
                     <div className="colC">
                         <ul className="call_action">
                             <li onClick={openSearch}><button><img src="/assets/icon/search-white.svg" alt="Search Icon" /></button></li>
-                            <li className="myAccount" onClick={openLogin}><Link href=""><img src="/assets/icon/user-white.svg" alt="User Icon" /></Link>
+                            
+                            {/* <li className="myAccount" onClick={openLogin}> */}
+                            <li className="myAccount" onClick={openLogin}>
+                                <Link href=""><img src="/assets/icon/user-white.svg" alt="User Icon" />
+                            </Link>
                                 <div className="dropdown-menu">
                                     <ul>
-                                        <li><Link href="/profile">My Account</Link></li>
-                                        <li><Link href="/order">My Order</Link></li>
-                                        <li><Link href="/wishlist">My Wislist</Link></li>
+                                        <li><Link href="">My Account</Link></li>
+                                        <li><Link href="">My Order</Link></li>
+                                        <li><Link href="">My Wislist</Link></li>
                                         <li><Link href="/">Log Out</Link></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><Link href="/wishlist"><img src="/assets/icon/like-white.svg" alt="Wishlist Icon" /></Link>
+                            <li><Link href=""><img src="/assets/icon/like-white.svg" alt="Wishlist Icon" /></Link>
                                 <span className="dot-noti">5</span>
                             </li>
-                            <li><Link href="/cart"><img src="/assets/icon/cart-white.svg" alt="Cart Icon" /></Link>
+                            <li><Link href=""><img src="/assets/icon/cart-white.svg" alt="Cart Icon" /></Link>
                                 <span className="dot-noti">5</span>
                             </li>
                             <li>
