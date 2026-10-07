@@ -5,10 +5,14 @@ import { useEffect, useState } from "react";
 import MySelect from "./MySelect";
 
 const options_Category = [
-  { value: "Option 1", label: "Option 1"},
-  { value: "Option 2", label: "Option 2"},
-  { value: "Option 3", label: "Option 3"},
-  { value: "Option 4", label: "Option 4"},
+  { value: "Indoor Plants", label: "Indoor Plants"},
+  { value: "Outdoor Plants", label: "Outdoor Plants"},
+  { value: "Flowering Plants", label: "Flowering Plants"},
+  { value: "Medicinal & Herbal", label: "Medicinal & Herbal"},
+  { value: "Seeds & Bulbs", label: "Seeds & Bulbs"},
+  { value: "Pots & Planters", label: "Pots & Planters"},
+  { value: "Landscaping Services", label: "Landscaping Services"},
+  { value: "Bulk / Corporate Orders", label: "Bulk / Corporate Orders"},
 ]
 
 export default function EnquirePop() {
@@ -53,8 +57,8 @@ export default function EnquirePop() {
                     <div className="icon">
                         <Image src="/assets/icon/logo.svg" width="68" height="64" alt="Logo"></Image>
                     </div>
-                    <h2>Let’s Talk Business</h2>
-                    <p>Connect with our experts. Schedule a callback and get personalized assistance.</p>
+                    <h2>Let's Grow Together</h2>
+                    <p>Connect with our plant experts. Schedule a callback and get personalized plant recommendations.</p>
                 </div>
                 <div className="form form-grid">
                     <div className="form-group">
@@ -63,11 +67,11 @@ export default function EnquirePop() {
                     </div>
                     <div className="form-group">
                         <input type="text" className="form-control" />
-                        <label htmlFor="">Company Name</label>
+                        <label htmlFor="">Company / Nursery Name</label>
                     </div>
                     <MySelect 
                         id="category-select"
-                        placeholder="Category*"
+                        placeholder="Category of Interest*"
                         options={options_Category}
                         selectedValue={category}
                         onValueChange={setCategory}
@@ -78,11 +82,11 @@ export default function EnquirePop() {
                     </div>
                     <div className="form-group">
                         <input type="number" className="form-control" />
-                        <label htmlFor="">No. of uniform required</label>
+                        <label htmlFor="">No. of plants required</label>
                     </div>
                     <div className="form-group">
                         <textarea name="" id="" className="form-control"></textarea>
-                        <label htmlFor="">Description</label>
+                        <label htmlFor="">Tell us about your garden / requirement</label>
                     </div>
                     <button className="btn black_round">Submit Now</button>
                 </div>
