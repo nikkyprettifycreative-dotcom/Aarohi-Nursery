@@ -1,0 +1,139 @@
+@import '../_var'
+
+.career_banner
+    .icon
+        display: none
+
+.career-secA
+    .heading
+        max-width: 440px
+        margin: 0 auto
+        p
+            color: $text
+.career-secB
+    .current-openings
+        margin-top: 40px 
+        .col
+            --padlr: 0
+            border-radius: 10px
+            transition: .5s ease
+            margin-bottom: 10px
+            &.active
+                .title
+                    background: #000
+                    h6
+                        color: $white
+                    .ico
+                        --bgcolor: var(--white)
+                        &::after
+                            transform: scaleY(0)
+                article
+                    max-height: fit-content
+                    opacity: 1
+            .title
+                @include flex
+                overflow: hidden
+                align-items: center
+                padding: 15px 20px
+                cursor: pointer
+                transition: .5s ease
+                border: 1px solid #ccc
+                background-color: #E4E4E4
+                border-radius: 5px
+                h6
+                    font-family: $Lato
+                    font-size: 18px
+                    line-height: 1.2
+                    @include font(700) 
+                    flex: 1 
+                    padding-right: 1rem
+                    transition: .5s ease
+                    @include media(540)
+                        font-size: 16px
+                    @include media(345)
+                        font-size: 14px
+                .ico
+                    flex: 0 1 auto
+                    --size: 18px
+                    --border: 2px
+                    --bgcolor: var(--black)
+                    height: var(--size)
+                    width: var(--size)
+                    @include before(var(--bgcolor))
+                    @include after(var(--bgcolor))
+                    &::before,&::after
+                        transition: .5s ease
+                    &::before
+                        top: calc(var(--size) / 2 - var(--border) / 2)
+                        bottom: auto
+                        height: var(--border)
+                        width: 100%
+                    &::after
+                        left: calc(var(--size) / 2)
+                        translate: -50% 0 
+                        right: auto
+                        width: var(--border)
+                        height: 100%
+            article
+                position: relative
+                background: $white
+                border: 1px solid #c1c1c1
+                border-top: none
+                max-height: 0
+                opacity: 0
+                overflow: hidden
+                transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out
+                border-radius: 0 0 5px 5px 
+                .content-desc
+                    padding: 15px 20px 20px
+                    p,ul,h2,h3,h4,h5,h6
+                        margin-bottom: 16px
+                        @include media(540)
+                            margin-bottom: 10px
+                    *
+                        &:not(button)
+                            color: $text
+                            font-size: 16px
+                            line-height: 1.5
+                    h1,h2,h3,h4,h5,h6,b
+                        color: $black
+                        @include font(500)
+                    ul
+                        padding-left: 20px
+                        li
+                            list-style: none
+                            &::before
+                                background-color: var(--black)
+                            @include media(540)
+                                font-size: 14px
+                            &:not(:last-child)
+                                margin-bottom: 5px
+                    p
+                        @include media(540)
+                            font-size: 14px
+
+.career-secC
+    background-color: #F4F4F4
+    .heading
+        h3
+            text-transform: none
+            @include media(768)
+                font-size: 32px
+            @include media(540)
+                font-size: 28px
+    .form-grid
+        max-width: 780px
+        margin: 40px auto 0
+        --item: 2
+        @include media(540)
+            --item: 1
+        .form-group
+            background-color: $white
+            border-radius: 10px
+            &::before, &::after
+                display: none
+            label, .form-control, .file-name
+                padding: 0 10px
+        .btn_wrapper
+            .btn
+                padding: 0 50px

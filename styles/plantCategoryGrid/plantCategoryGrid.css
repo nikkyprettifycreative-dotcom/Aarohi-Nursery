@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.plant_category_grid {
+  background: var(--light-green);
+}
+.plant_category_grid .container-fluid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media only screen and (max-width: 1300px) {
+  .plant_category_grid .container-fluid {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .plant_category_grid .container-fluid {
+    padding: 0 25px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .plant_category_grid .container-fluid {
+    padding: 0 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .plant_category_grid .container-fluid {
+    padding: 0 15px;
+  }
+}
+.plant_category_grid .heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+@media only screen and (max-width: 768px) {
+  .plant_category_grid .heading {
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .plant_category_grid .heading {
+    margin-bottom: 1.5rem;
+  }
+}
+.plant_category_grid .heading h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #000;
+}
+@media only screen and (max-width: 991px) {
+  .plant_category_grid .heading h2 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .plant_category_grid .heading h2 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .plant_category_grid .heading h2 {
+    font-size: 20px;
+  }
+}
+.plant_category_grid .plant_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px 15px;
+}
+@media only screen and (max-width: 991px) {
+  .plant_category_grid .plant_grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 18px 12px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .plant_category_grid .plant_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px 10px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .plant_category_grid .plant_grid {
+    grid-gap: 12px 8px;
+  }
+}
+.plant_category_grid .btn_wrapper {
+  margin-top: 50px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .plant_category_grid .btn_wrapper {
+    margin-top: 30px;
+  }
+}
+
+.plant_grid_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--light-green);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.plant_grid_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.plant_grid_item:hover .plant_item_img img {
+  transform: scale(1.08);
+}
+.plant_grid_item .plant_item_img {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background: var(--gray);
+  line-height: 0;
+  margin: 0;
+}
+.plant_grid_item .plant_item_img img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.plant_grid_item figcaption {
+  padding: 12px 12px 8px;
+}
+@media only screen and (max-width: 540px) {
+  .plant_grid_item figcaption {
+    padding: 10px 8px 6px;
+  }
+}
+.plant_grid_item figcaption h6 {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 4px;
+}
+@media only screen and (max-width: 540px) {
+  .plant_grid_item figcaption h6 {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .plant_grid_item figcaption h6 {
+    font-size: 12px;
+  }
+}
+.plant_grid_item figcaption .price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+@media only screen and (max-width: 540px) {
+  .plant_grid_item figcaption .price {
+    font-size: 12px;
+  }
+}
+.plant_grid_item .wishlist_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+.plant_grid_item .wishlist_btn svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+.plant_grid_item .wishlist_btn svg path {
+  stroke: #000;
+  transition: stroke 0.3s ease;
+}
+.plant_grid_item .wishlist_btn:hover {
+  background: var(--red);
+}
+.plant_grid_item .wishlist_btn:hover svg path {
+  stroke: var(--white);
+}
+@media only screen and (max-width: 540px) {
+  .plant_grid_item .wishlist_btn {
+    width: 26px;
+    height: 26px;
+    top: 6px;
+    right: 6px;
+  }
+  .plant_grid_item .wishlist_btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+.plant_grid_item .view_details_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 6px 12px 14px;
+  padding: 8px 14px;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 540px) {
+  .plant_grid_item .view_details_btn {
+    margin: 5px 8px 10px;
+    padding: 7px 10px;
+    font-size: 11px;
+    gap: 4px;
+  }
+}
+.plant_grid_item .view_details_btn svg {
+  display: block;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.plant_grid_item .view_details_btn span {
+  position: relative;
+  z-index: 1;
+}
+.plant_grid_item .view_details_btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  transition: left 0.6s ease;
+  z-index: 0;
+}
+.plant_grid_item .view_details_btn:hover svg {
+  transform: translateX(3px);
+}
+.plant_grid_item .view_details_btn:hover::before {
+  left: 100%;
+}
+
+.plant_category_grid .btn_wrapper .btn.black {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+.plant_category_grid .btn_wrapper .btn.black::before {
+  background: var(--black);
+  background-size: 100% 100%;
+}
+.plant_category_grid .btn_wrapper .btn.black:hover {
+  color: var(--white);
+  border-color: transparent;
+  background: var(--black);
+}/*# sourceMappingURL=plantCategoryGrid.css.map */

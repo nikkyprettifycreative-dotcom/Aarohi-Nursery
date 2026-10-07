@@ -1,0 +1,487 @@
+@import '../_var'
+
+.hero_sec
+    position: relative
+    .scrollbar_wrapper
+        width: 100%
+        display: flex
+        align-items: center
+        gap: 20px
+        position: absolute
+        left: 13%
+        bottom: 5%
+        transform: translate(-10%, 5%)
+        z-index: 3
+        --swiper-pagination-color: #fff
+        @include media(1300)
+            width: 90%
+        @include media(768)
+            width: 80%
+        .play_btn
+            --btnsize: 16px
+            display: inline-block
+            vertical-align: middle
+            --btncolor: #fff
+            background: transparent
+            width: 0
+            height: var(--btnsize)
+            border-color: transparent transparent transparent var(--btncolor)
+            transition: 100ms all ease
+            cursor: pointer
+            border-style: solid
+            border-width: calc(var(--btnsize) * 0.5) 0 calc(var(--btnsize) * 0.5) calc(var(--btnsize) * 0.81)
+            &.pause
+                border-style: double
+                border-width: 0px 0 0px calc(var(--btnsize) * 0.81)
+        // .play_btn
+        //     flex: 0 1 auto
+        //     width: 45px
+        //     height: 45px
+        //     border: 1px solid $white
+        //     border-radius: 50%
+        //     display: flex
+        //     align-items: center
+        //     justify-content: center
+            svg
+                vertical-align: middle
+                width: 20px
+                height: 20px
+        .progress_bar
+            position: relative
+            flex: 1
+    .soundbar
+        position: absolute
+        right: 3%
+        bottom: 15%
+        z-index: 1
+        transform: translate(3%, 15%)
+        cursor: pointer
+        @include media(768)
+            ight: 5%
+            bottom: 5%
+            transform: translate(5%, 5%)
+        &.active  
+            .sound_on
+                display: block
+            .sound_off
+                display: none
+        .sound_on
+            display: none
+        .sound_off
+            display: block
+    .swiper-nav.center-full.home-nav
+        max-width: 85%
+        @include media(768)
+            max-width: 90%
+        .swiper-prev, .swiper-next
+            width: 40px
+            height: 40px
+            background: $white
+            border-radius: 50%   
+            @include media(540)
+                width: 30px
+                height: 30px
+            svg 
+                vertical-align: middle
+.banner
+    &.home-banner
+        &::before
+            background: linear-gradient(359deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0.6) 88%)
+        .bg 
+            height: 100vh
+            @include media(540)
+                height: 80vh
+            .banner-wrapper
+                left: 50%
+                top: unset
+                bottom: 10%
+                transform: translate(-50%, 10%)
+                @include media(768)
+                    width: 400px
+                @include media(540)
+                    width: 300px
+                .heading
+                    text-align: center
+                    h1
+                        font-size: 48px
+                        @include media(1024)
+                            font-size: 45px
+                        @include media(991)
+                            font-size: 38px
+                        @include media(768)
+                            font-size: 32px
+                    p
+                        text-transform: uppercase
+                        letter-spacing: 2px
+                        font-weight: 300
+                        @include media(540)
+                            font-size: 14px
+                    .btn
+                        margin-top: 40px
+                        @include media(1024)
+                            margin-top: 35px
+                        @include media(991)
+                            margin-top: 30px
+                            
+.client_slider_wrapper
+    .heading
+        margin-bottom: 4rem
+        @include media(991)
+            margin-bottom: 3rem
+        @include media(768)
+            max-width: 300px
+            margin: 0 auto 2rem
+        @include media(540)
+            margin: 0 auto 1.5rem
+    .client_slider
+        .swiper-wrapper
+            transition-timing-function: linear !important
+        .swiper-slide
+            figure
+                width: 100%
+                height: 100%
+                &:hover
+                    img
+                        filter: grayscale(0)
+                img
+                    object-fit: contain
+                    filter: grayscale(1)
+                    transition: .5s ease
+
+.home-secA
+    background: $light-green
+    .heading
+        margin-bottom: 3rem
+        @include media(768)
+            margin-bottom: 2rem
+        @include media(540)
+            margin-bottom: 1.5rem
+    .profession_grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 6px 8px
+        overflow: hidden
+        @include media(540)
+            grid-template-columns: repeat(1, 1fr)
+        .profession_col
+            @include shine()
+            &:hover
+                figure
+                    img
+                        transform: scale(1.1)
+            &::after
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0.6) 88%)
+            figure
+                overflow: hidden
+            figcaption
+                text-align: center
+                padding: 0 10px 20px
+                bottom: 10%
+                translate: 0 10%
+                h6, p 
+                    color: $white
+                    transition: 0.6s ease
+                h6
+                    font-size: 24px
+                    @include media(768)
+                        font-size: 20px
+                p
+                    font-size: 14px
+                    @include media(768)
+                        line-height: 1.2
+                        font-size: 12px
+    .btn_wrapper
+        margin-top: 50px
+        text-align: center
+        @include media(768)
+            margin-top: 30px
+
+.bestSeller_slider_wrapper
+    background: $light-green !important
+    position: relative
+    z-index: 0
+    .container-fluid
+        .btn_wrapper
+            margin-top: 50px
+            text-align: center
+            @include media(768)
+                margin-top: 30px
+
+.animate_banner.banner
+    &::before
+        background: linear-gradient(270deg, rgba(248, 248, 248, 0) 90%, rgba(0, 0, 0, 0) 100%)
+    .bg
+        height: 100vh
+        @include media(768)
+            height: 80vh
+    .banner-wrapper
+        .container
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            @include media(768)
+                flex-direction: column
+                gap: 50px
+            @include media(540)
+                gap: 20px
+            .content
+                flex: 1
+                width: 30%
+                @include media(768)
+                    width: 100%
+                    text-align: center
+                h2
+                    font-size: 50px
+                    letter-spacing: 10px
+                    padding-bottom: 5px
+                    line-height: 1.5
+                    color: #000
+                    @include media(991)
+                        font-size: 40px
+                    @include media(768)
+                        font-size: 32px
+                    @include media(540)
+                        font-size: 28px
+                h6
+                    font-size: 20px
+                    letter-spacing: 5px
+                    text-transform: uppercase
+                    font-family: $Lato 
+                    color: #000
+                    @include media(991)
+                        font-size: 18px
+                    @include media(768)
+                        font-size: 16px
+                    @include media(540)
+                        font-size: 14px
+                .btn
+                    margin-top: 50px
+                    z-index: 1
+                    @include media(540)
+                        margin-top: 20px
+                        margin-bottom: 30px
+            .animate_slider_wrapper
+                width: 45%
+                height: 100%
+                margin-right: 30px
+                position: relative
+                overflow: hidden
+                @include media(768)
+                    width: 55%
+                    margin-right: 0
+                @include media(540)
+                    width: 100%
+                .animate_slider
+                    height: 100%
+                    position: relative
+                    width: 100%
+                    .swiper-wrapper
+                        justify-content: start
+                    .swiper-slide-active
+                        z-index: 3
+                        transform: translate(0, 0) scale(1)
+                        opacity: 1
+                    .swiper-slide-prev
+                        z-index: 2
+                        transform: translate(89%, 0%) scale(0.9)
+                        opacity: 1
+                    .swiper-slide-next
+                        z-index: 1
+                        transform: translate(-52%, 0%) scale(0.8)
+                        opacity: 1
+                    .animate-slide
+                        transition: transform 1s ease, z-index 1s ease, opacity .1s ease
+                        &:not(.swiper-slide-active, .swiper-slide-prev, .swiper-slide-next)
+                            opacity: 0
+                        figure
+                            position: relative
+                            @include before(linear-gradient(180deg, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0.6) 88%))
+                            img
+                                width: 100%
+                        figcaption
+                            position: absolute
+                            bottom: 10%
+                            left: 0
+                            transform: translate(0, 10%)
+                            z-index: 0
+                            padding: 0 40px 0
+                            @include media(768)
+                                padding: 0 20px
+                            p
+                                font-size: 20px
+                                color: $white
+                                @include media(991)
+                                    font-size: 18px 
+                .fraction
+                    position: absolute
+                    right: -74%
+                    left: unset
+                    top: unset
+                    bottom: 8%
+                    z-index: 4     
+                    --swiper-pagination-fraction-color: #fff
+                    span
+                        font-size: 16px  
+                        font-weight: 400
+                        @include media(768)
+                            font-size: 14px
+.promo-sec.banner
+    .bg
+        height: 80vh
+        @include media(768)
+            height: 50vh
+    .banner-wrapper
+        top: unset
+        bottom: 15%
+        translate: 0 15%
+        h2
+            font-size: 50px
+            color: $white
+            line-height: 1.2
+            padding-bottom: 10px
+            @include media(991)
+                font-size: 40px
+                padding-bottom: 15px
+            @include media(768)
+                font-size: 34px
+            @include media(540)
+                font-size: 30px
+        p
+            color: $white
+            margin-bottom: 50px
+            @include media(540)
+                margin-bottom: 30px
+                line-height: 1.2
+
+.counter-sec.banner
+    .bg
+        @include media(768)
+            height: 70vh
+    .banner-wrapper
+        color: $white
+        line-height: 1.2
+        h2
+            font-size: 36px
+            @include media(991)
+                font-size: 30px
+            @include media(540)
+                font-size: 24px
+        .subhead
+            padding: 20px 0 30px
+            max-width: 540px
+            font-weight: 300
+            line-height: 1.5
+            @include media(540)
+                padding: 15px 0 20px
+                font-size: 14px
+        .counter-wrapper
+            display: flex
+            align-items: center
+            gap: 30px
+            margin-bottom: 30px
+            flex-wrap: wrap
+            @include media(540)
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+            .counter-info-wrap
+                h5
+                    font-family: $Lato
+                p
+                    font-weight: 300
+
+.testimony_slider_wrapper 
+    background: $light-green
+    .upper-sec
+        .heading
+            @include media(1300)
+                max-width: 550px
+                margin: 0 auto
+            @include media(991)
+                max-width: 500px
+
+.sec-pad
+    background: $light-green
+    @include media(540)
+    padding-bottom: 0
+
+
+.client_slider_wrapper.sec-pad
+    @include media(540)
+        padding-bottom: 0
+.category_slider_wrapper
+    .container-fluid
+        max-width: 1280px
+        margin: 0 auto
+        padding: 0 40px
+        @include media(1300)
+            padding: 0 30px
+        @include media(991)
+            padding: 0 25px
+        @include media(768)
+            padding: 0 20px
+        @include media(540)
+            padding: 0 15px
+
+    .category_slider
+        .category_col
+            display: block
+            text-decoration: none
+            position: relative
+            overflow: hidden
+            // border-radius: 8px
+            cursor: pointer
+            transition: transform .4s ease, box-shadow .4s ease
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08)
+            
+            &:hover
+                transform: translateY(-5px)
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15)
+            
+            figure
+                display: block
+                margin: 0
+                aspect-ratio: 3 / 4
+                overflow: hidden
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    display: block
+                    transition: transform .8s ease
+
+            &:hover
+                figure
+                    img
+                        transform: scale(1.1)
+
+            figcaption
+                position: absolute
+                bottom: 0
+                left: 0
+                right: 0
+                padding: 0 15px 20px
+                z-index: 2
+                text-align: center
+                
+                h6
+                    color: #fff
+                    font-size: 18px
+                    margin-bottom: 4px
+                    @include media(540)
+                        font-size: 16px
+                
+                p
+                    color: rgba(255, 255, 255, 0.9)
+                    font-size: 13px
+                    @include media(540)
+                        font-size: 12px
+
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.75) 100%)
+                z-index: 1
+                pointer-events: none

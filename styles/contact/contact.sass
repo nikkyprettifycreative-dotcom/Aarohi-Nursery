@@ -1,0 +1,93 @@
+@import '../_var'
+
+.contact_banner
+    .banner-wrapper
+        .icon
+            display: none
+
+.contact-secA
+    .heading
+        .icon
+            width: 70px
+            height: 70px
+            margin: 0 auto 20px
+        h3
+            font-size: 24px
+            text-transform: uppercase
+            letter-spacing: 3px
+            line-height: 1.2
+            @include media(768)
+                max-width: 400px
+                margin: 0 auto
+    .contact_wrapper
+        padding: 40px 0 
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 15px
+        @include media(991)
+            grid-template-columns: repeat(2, 1fr)
+        @include media(540)
+            grid-template-columns: repeat(1, 1fr)
+        .contact_col
+            padding: 20px 15px
+            display: flex
+            gap: 10px
+            background-color: #E2E2E2AD
+            border-radius: 5px
+            &.call_col
+                .content
+                    a
+                        margin-bottom: 7px
+                    .whtsp
+                        display: flex
+                        align-items: center
+                        background: $white
+                        gap: 7px
+                        padding: 6px 10px
+                        border-radius: 5px
+                        width: fit-content
+                        margin-top: 6px
+            .icon
+                flex: 0 1 auto
+            .content
+                flex: 1
+                .title
+                    font-weight: 700
+                    padding-bottom: 5px
+                a:not(.get_direct)
+                    color: $text
+                    font-size: 14px
+                    line-height: 1.2
+                    display: block
+                    letter-spacing: 1px
+                .get_direct 
+                    margin-top: 5px
+                    letter-spacing: 1px
+                    font-size: 14px
+                    color: $black
+                    display: block
+
+.contact-secB
+    padding-top: 0
+    .heading
+        max-width: 440px
+        margin: 0 auto 40px
+        h3
+            text-transform: uppercase
+            letter-spacing: 3px
+            font-size: 24px
+            line-height: 1.5
+    .form
+        max-width: 650px
+        --item: 2
+        margin: 0 auto 
+        @include media(540)
+            --item: 1
+        .btn_wrapper
+            .btn
+                padding: 0 40px
+
+.contact-secC
+    line-height: 0
+    iframe
+        filter: grayscale(1)

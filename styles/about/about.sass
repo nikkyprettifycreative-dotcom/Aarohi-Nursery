@@ -1,0 +1,110 @@
+@import '../_var'
+
+.about-secA
+    .flex
+        align-items: center
+        justify-content: space-around
+        gap: 50px
+        @include media(768)
+            flex-direction: column
+            gap: 30px
+        @include media(540)
+            gap: 20px
+        .colA
+            flex: 0 1 auto
+            max-width: 30%
+            .ub_icon
+                mask-image: url(/assets/images/about/about_ub.svg)
+                mask-size: 100%
+                mask-repeat: no-repeat
+                height: 390px
+                width: 100%
+                line-height: 0
+                @include media(768) 
+                    height: 150px
+                @include media(540)
+                    height: 100px
+                video
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+        .colB
+            flex:  1
+            max-width: 700px
+            @include media(768) 
+                text-align: center
+            h2
+                margin-bottom: 20px
+                letter-spacing: 7px
+                @include media(991)
+                    font-size: 34px
+                @include media(540)
+                    font-size: 28px
+            .content
+                margin-bottom: 20px
+                max-height: 225px
+                overflow: hidden
+                transition: max-height .5s ease
+                @include media(768) 
+                    max-height: 100%
+                &.open_height
+                    max-height: 450px
+                    overflow: auto
+            p
+                padding-bottom: 15px
+                color: $text
+            .read_more
+                color: $black
+                display: flex
+                align-items: center
+                gap: 5px
+                @include media(768) 
+                    display: none
+.counter-sec
+    &.about_counter
+        .bg
+            @include media(768)
+                height: 70vh
+        .banner-wrapper
+            text-align: center
+            top: 60%
+            translate: 0 -60%
+            h2
+                letter-spacing: 7px 
+                @include media(991)
+                    font-size: 30px
+                @include media(540)
+                    font-size: 24px
+            .subhead
+                margin: 0 auto
+                @include media(540)
+                    padding: 15px 0 20px
+                    font-size: 14px
+            .counter-wrapper
+                justify-content: center
+                margin-top: 30px
+                @include media(540)
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+            .btn
+                display: none
+    .banner-wrapper
+        color: $white
+        line-height: 1.2
+        h2
+            font-size: 36px
+        .subhead
+            padding: 20px 0 30px
+            max-width: 540px
+            font-weight: 300
+            line-height: 1.5
+        .counter-wrapper
+            display: flex
+            align-items: center
+            gap: 30px
+            margin-bottom: 30px
+            .counter-info-wrap
+                h5
+                    font-family: $Lato
+                p
+                    font-weight: 300

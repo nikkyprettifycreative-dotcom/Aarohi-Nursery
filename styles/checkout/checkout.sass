@@ -1,0 +1,815 @@
+@import '../_var'
+
+.checkout-header
+    padding: 20px 0
+    background: #F3F3F3
+    .checkout-header-wrapper
+        display: flex
+        align-items: center
+        @include media(540) 
+            justify-content: space-between
+            flex-direction: column
+            align-items: start
+        .colA
+            img
+                @include media(540)
+                    width: 50px
+        .colB
+            flex: 1
+            padding: 0 3rem
+            @include media(768) 
+                padding: 0
+            @include media(540) 
+                margin-top: 10px
+                width: 100%
+            ul
+                text-align: center
+                max-width: 514px
+                margin-left: auto
+                margin-right: auto
+                li
+                    display: inline-block
+                    vertical-align: middle
+                    background: $white
+                    position: relative
+                    &:not(:last-child)
+                        margin-right: 5rem
+                        @include media(768)
+                            margin-right: 2rem 
+                        &::before
+                            content: ''
+                            position: absolute
+                            left: calc( 100% + 20px )
+                            bottom: 15%
+                            height: 1px
+                            width: 45px
+                            border: 1px dashed #ccc
+                            @include media(768)
+                                left: calc(100% + 8px)
+                                width: 21px    
+                    a
+                        display: block
+                        text-align: center
+                        font-size: 14px
+                        line-height: 17.22px
+                        letter-spacing: 0.15em
+                        text-align: center
+                        color: $text
+                        text-transform: uppercase
+                        background: #F3F3F3
+                        @include media(768)
+                            font-size: 12px 
+                        .ico
+                            height: 28px
+                            width: 28px
+                            margin: 0 auto 16px
+                            border-radius: 50%
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            background: #CDCDCD
+                            @include media(768) 
+                                width: 20px
+                                height: 20px
+                                margin: 0 auto 10px
+                        &.active
+                            color: $black
+                            .ico
+                                background: $black
+        .colC
+            .secure-kaedj
+                color: $text
+                font-size: 14px
+                line-height: 17.22px
+                letter-spacing: 0.15em
+                @include media(540) 
+                    position: absolute
+                    top: 5%
+                    right: 4%
+                    transform: translate(4%, -5%)
+
+
+.check-out-main
+    .check-out-secA-zbyqo
+        background: #FAFAFA
+        .flex-checkout-cwgln
+            padding: 58px 0 42px 
+            display: flex
+            @include media(991)
+                padding: 40px 0 30px
+                flex-direction: column
+            @include media(768)
+                padding: 30px 0 
+            @include media(540) 
+                padding: 25px 0 30px
+            .colA-flex-hfmcf,.colB-flex-hfmcf
+                position: sticky
+                top: 20px
+                height: 100%
+                @include media(991)
+                    position: static
+            .colA-flex-hfmcf
+                flex: 0 1 70%
+                max-width: 70%
+                width: 100%
+                @include media(991)
+                    flex: 0 1 100%
+                    max-width: 100%
+                .rysiv
+                    padding-top: 20px
+            .colB-flex-hfmcf
+                flex: 1
+                margin-left: 26px
+                padding-left: 26px
+                &.add_sum
+                    @include media(540) 
+                        border-top: 1px solid #E8E7E7
+                        padding: 15px 5px 5px
+                @include media(991)
+                    margin-left: 0
+                    padding: 25px 0
+                    margin-top: 20px
+                @include media(540) 
+                    padding: 5px
+                    margin-top: 20px
+                .others
+                    margin-top: 20px
+                    .title
+                        font-size: 16px
+                        font-weight: 700
+                        margin-bottom: 20px
+                    .other_order
+                        background: #F0F0F0
+                        display: flex
+                        gap: 20px
+                        padding: 10px
+                        @include media(991) 
+                            width: fit-content
+                            gap: 15px
+                            padding: 10px 15px
+                        @include media(540) 
+                            width: 100%
+                        figure
+                            flex: 0 1 auto
+                        figcaption
+                            flex: 1
+                            .pro_name
+                                font-family: $Lato
+                                font-size: 14px
+                                color: $text
+                                line-height: 1.2
+                            ul
+                                padding-top: 10px 
+                                li
+                                    font-size: 12px
+                                    color: $text
+                                    font-weight: 700
+                                    span
+                                        font-weight: 500
+                                    &.total
+                                        color: $black
+                                        font-size: 14px 
+                                        padding-top: 10px
+
+        .btm-check-out-cwgln
+            padding: 60px 0 110px
+            @include media(768)
+                padding: 50px 0 60px
+            @include media(540) 
+                display: none
+            .bank-list
+                display: flex
+                align-items: flex-end
+                gap: 6px
+                @include media(540) 
+                    flex-direction: column
+                flex: 1
+                li
+                    display: inline-block
+                    vertical-align: middle
+                    line-height: 0
+        .bag-dobyk
+            .upper-sshjm
+                display: flex
+                align-items: center
+                margin-bottom: 36px
+                justify-content: space-between
+                @include media(768) 
+                    margin-bottom: 20px
+                h6
+                    font-size: 18px
+                    line-height: 1.2
+                    text-transform: uppercase
+                    letter-spacing: 1px
+                    @include media(540) 
+                        font-size: 16px
+                .btn
+                    @include media(540) 
+                        padding: 0 8px
+                        height: 25px
+                        font-size: 10px
+                .btn-xyxgw
+                    flex: 1
+                    text-align: right
+                    .uayri
+                        color: $text
+                        &:is(a,button)
+                            &:hover
+                                color: $primary
+                        &:not(:last-child)
+                            border-right: 1px solid #D1D1D1
+                            margin-right: 30px
+                            padding-right: 30px
+            .bag-product-wrsvn-wrap
+                .bag-product-wrsvn
+                    padding: 16px
+                    border: 1px solid #E8E7E7
+                    border-radius: 5px
+                    display: flex
+                    position: relative
+                    &:not(:last-child)
+                        margin-bottom: 22px
+                    @include media(540) 
+                        background: $white
+                        flex-direction: column
+                        align-items: center
+                        gap: 20px
+                        padding: 10px
+                    .remove-wrsvn
+                        position: absolute
+                        top: 15px
+                        right: 16px
+                        z-index: 3
+                        line-height: 0
+                    figure
+                        line-height: 0
+                        position: relative
+                        a
+                            display: block
+                            line-height: 0
+                        img
+                            width: 107px
+                        input
+                            @include checkbox(true,$white)
+                            position: absolute
+                            top: 8px
+                            left: 6px
+                            z-index: 3
+                    figcaption
+                        flex: 1
+                        padding-left: 34px
+                        @include media(1100) 
+                            padding-left: 25px
+                        @include media(540) 
+                            border-top: 1px solid #E8E7E7
+                            padding: 5px
+                        .title-tznlw
+                            font-size: 16px
+                            line-height: 1.2
+                            color: $black
+                            margin-bottom: 18px
+                            font-family: $Lato
+                            @include media(768)
+                                margin-bottom: 10px
+                            @include media(540)
+                                padding-top: 5px
+                        .sizes_wrapper
+                            padding: 20px 0 
+                            display: flex
+                            align-items: center
+                            flex-wrap: wrap
+                            gap: 20px 7px
+                            @include media(768)
+                                padding: 10px 0 
+                                gap: 10px 7px
+                            @include media(540)
+                                padding: 10px 0 20px
+                        .total_price
+                            display: flex
+                            align-items: center
+                            padding: 10px 0
+                            @include media(768)
+                                flex-direction: column
+                                gap: 10px
+                            @include media(540)
+                                padding: 0px 0px 10px 
+                                border-top: 1px solid #E8E7E7
+                            .emb_sec
+                                flex: 0 1 auto
+                                padding-right: 30px
+                                border-right: 1px solid #0000002B
+                                @include media(1100) 
+                                    padding-right: 10px
+                                @include media(768)
+                                    padding-right: 0
+                                    width: 100%
+                                    display: flex
+                                    align-items: center
+                                    border-right: none
+                                @include media(540) 
+                                    padding: 5px 0 
+                                    border-bottom: 1px solid #E8E7E7
+                                    justify-content: center
+                                    gap: 10px
+                                p
+                                    font-size: 14px
+                                    line-height: 1.2
+                                img
+                                    opacity: 0.3
+                                    height: 100%
+                                    width: 128px 
+                                    @include media(768)
+                                        width: 130px
+                            .price_sec
+                                display: flex
+                                align-items: center
+                                gap: 30px
+                                flex: 1
+                                justify-content: end
+                                padding-right: 40px
+                                @include media(1100) 
+                                    gap: 15px
+                                    padding-right: 15px
+                                @include media(1024) 
+                                    gap: 10px
+                                @include media(991) 
+                                    gap: 25px
+                                @include media(540) 
+                                    display: grid
+                                    grid-template-columns: repeat(2, 1fr)
+                                    width: 100%
+                                    gap: 10px
+                                    text-align: center
+                                    padding-right: 0
+                                .item_price
+                                    p, span
+                                        font-size: 14px
+                                        line-height: 1.2
+                                        color: $text
+                                    span
+                                        font-weight: 700
+                                    &:last-child
+                                        p, span
+                                            font-weight: 700
+                                            color: $black
+                .add_details
+                    padding: 30px 15px 
+                    display: flex
+                    gap: 10px
+                    border: 1px solid #E8E7E7
+                    border-radius: 5px
+                    margin-bottom: 25px
+                    @include media(540) 
+                        padding: 15px 10px
+                        margin-bottom: 20px
+                    .chk-box
+                        flex: 0 1 auto
+                        position: relative
+                        --circle: 17px
+                        input
+                            position: absolute
+                            left: 0 
+                            top: 0
+                            width: 100%
+                            height: 100%
+                            z-index: 1
+                            opacity: 0
+                            &:checked 
+                                ~ .in-bx
+                                    &::before
+                                        opacity: 1
+                        .in-bx
+                            width: var(--circle)
+                            height: var(--circle)
+                            border: 1px solid $black
+                            border-radius: 50%
+                            position: relative
+                            &::before
+                                content: ""
+                                position: absolute
+                                left: 2px
+                                top: 2px
+                                width: calc( var(--circle) - 6px )
+                                height: calc( var(--circle) - 6px )
+                                background: $black
+                                border-radius: 50%
+                                opacity: 0
+                    .content
+                        flex: 1
+                        .name
+                            font-size: 20px
+                            font-family: $Lato
+                            font-weight: 500
+                            line-height: 1
+                            padding-bottom: 10px
+                            @include media(540) 
+                                font-size: 18px
+                                padding-bottom: 6px
+                        .address
+                            font-size: 16px
+                            color: $text
+                            max-width: 60%
+                            @include media(540) 
+                                max-width: 100%
+                                font-size: 14px
+                                line-height: 1.2
+                        .contact
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+                            padding-top: 20px
+                            .mob
+                                vertical-align: middle
+                                color: $text
+                                font-size: 14px
+                                @include media(540) 
+                                    font-size: 12px
+                                a
+                                    color: $black
+                            .btn_wrap
+                                display: flex
+                                align-items: center
+                                gap: 20px
+                                @include media(540) 
+                                    gap: 10px
+                                .remove, .edit
+                                    font-size: 14px
+                                    text-transform: uppercase
+                                    @include media(540) 
+                                        font-size: 12px
+                                        font-weight: 700
+                                .remove
+                                    color: $text
+                .pay_details
+                    border: 1px solid #D2D2D2
+                    border-radius: 5px
+                    padding: 30px 25px 
+                    @include media(540) 
+                        padding: 20px 15px
+                    img
+                        width: 180px
+                    p
+                        line-height: 1
+                    .radio_wrapper
+                        margin: 30px 0 15px
+                        position: relative
+                        width: 100%
+                        height: 100%
+                        display: flex
+                        gap: 10px
+                        @include media(540) 
+                            margin: 20px 0 10px
+                        p
+                            line-height: 1.2
+                            color: $text
+                            @include media(540) 
+                                font-size: 14px
+                        .chk-box
+                            --circle: 17px
+                            input
+                                position: absolute
+                                left: 0 
+                                top: 0
+                                width: 100%
+                                height: 100%
+                                z-index: 1
+                                opacity: 0
+                                &:checked 
+                                    ~ .in-bx
+                                        &::before
+                                            opacity: 1
+                            .in-bx
+                                width: var(--circle)
+                                height: var(--circle)
+                                border: 1px solid $black
+                                border-radius: 50%
+                                position: relative
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    left: 2px
+                                    top: 2px
+                                    width: calc( var(--circle) - 6px )
+                                    height: calc( var(--circle) - 6px )
+                                    background: $black
+                                    border-radius: 50%
+                                    opacity: 0
+                    .check_wrapper
+                        position: relative
+                        margin-bottom: 30px
+                        width: 100%
+                        height: 100%
+                        display: flex
+                        gap: 10px
+                        @include media(540) 
+                            margin-bottom: 20px
+                        p
+                            line-height: 1.2
+                            color: $text
+                            @include media(540) 
+                                font-size: 14px
+                            a
+                                text-decoration: underline
+                                color: $black
+                        .chk-box
+                            --box: 16px
+                            height: 100%
+                            .in-bx
+                                width: var(--box)
+                                height: var(--box)
+                                background: #D9D7D7
+                                border-radius: 3px
+                                position: relative
+                                z-index: 1
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    width: 100%
+                                    height: 100%
+                                    background: url(/assets/icon/tick-white.svg) no-repeat
+                                    background-position: 50% 50%
+                                    background-size: calc( var(--box) - 5px )
+                                    z-index: 1
+                                    filter: invert(1)
+                                    opacity: 0
+                            input
+                                position: absolute
+                                width: 100%
+                                height: 100%
+                                left: 0
+                                top: 0
+                                opacity: 0
+                                z-index: 1
+                                &:checked 
+                                    ~ .in-bx
+                                        &::before
+                                            opacity: 1
+                    .btn
+                        padding: 0 35px
+            .ship_address
+                width: 100%
+                .upper
+                    position: relative
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    margin-bottom: 25px
+                    @include media(540) 
+                        margin-bottom: 15px
+                    .chk-box
+                        --box: 20px
+                        height: 100%
+                        .in-bx
+                            width: var(--box)
+                            height: var(--box)
+                            background: #D9D7D7
+                            border-radius: 3px
+                            position: relative
+                            z-index: 1
+                            &::before
+                                content: ""
+                                position: absolute
+                                width: 100%
+                                height: 100%
+                                background: url(/assets/icon/tick-white.svg) no-repeat
+                                background-position: 50% 50%
+                                background-size: calc( var(--box) - 10px )
+                                z-index: 1
+                                filter: invert(1)
+                                opacity: 0
+                        input
+                            position: absolute
+                            width: 100%
+                            height: 100%
+                            left: 0
+                            top: 0
+                            opacity: 0
+                            z-index: 2
+                            &:checked 
+                                ~ .in-bx
+                                    &::before
+                                        opacity: 1
+                button
+                    display: none
+                    transition: .5s ease
+                    &.on
+                        display: block
+        .coupon-nvixw
+            padding-bottom: 60px
+            position: relative
+            .tlt-vcfrm
+                font-size: 16px
+                line-height: 24px
+                color: $black
+                margin-bottom: 14px
+                font-weight: 700
+            .cupn-hjgn
+                display: flex
+                gap: 12px
+                input
+                    flex: 1
+                    border: none
+                    border-bottom: 1px solid $text
+                    background: transparent
+                    &:focus
+                        outline: none
+            .invalid-coupn
+                color: red
+                position: absolute
+                left: 0
+                right: 0
+                bottom: 30px
+                font-size: 14px
+        .prd-dtl-adr-wrap
+            border-bottom: 1px solid #D3D3D3
+            padding-bottom: 40px
+            margin-bottom: 28px
+            .prd-dtl-adr
+                display: flex
+                position: relative
+                &:not(:last-child)
+                    margin-bottom: 27px
+                figure
+                    line-height: 0
+                    position: relative
+                    a
+                        display: block
+                        line-height: 0
+                    img
+                        width: 64px
+                figcaption
+                    flex: 1
+                    padding-left: 21px
+                    .title-mfyg
+                        font-size: 14px
+                        line-height: 18px
+                        color: $text
+                        margin-bottom: 18px
+                    .price-btm-cyrq
+                        li
+                            display: inline-block
+                            vertical-align: middle
+                            &:not(:last-child)
+                                margin-right: 8px
+                            &.price-pefca
+                                color: $text
+                                text-decoration: line-through
+                        .price-cyrq
+                            font-family: $Lato
+                            font-size: 14px
+                            line-height: 18px
+                            span
+                                font-family: $LeJ
+                                font-size: 14px
+                                line-height: 1
+                                display: inline-block
+                        .price-jpzi
+                            font-family: $Lato
+                            font-size: 14px
+                            line-height: 1
+                            color: $text
+                            text-decoration: line-through
+                            span
+                                display: inline-block
+                                text-decoration: line-through
+                                font-family: $LeJ
+                        .discount-cyrq
+                            font-family: $Lato
+                            font-size: 14px
+                            line-height: 1
+                            color: $primary
+                            font-weight: bold
+        .ttl-tkywa
+            font-size: 20px
+            line-height: 24px
+            color: $black
+        .irmhhz
+            .kmmdc
+                margin-bottom: 26px
+        .dvhws
+            .txsmx
+                margin-bottom: 32px
+            .nggtj-wrap
+                max-width: 460px
+                display: flex
+                gap: 26px
+                .chckbx-nggtj
+                    flex: 1
+                    background: #F3F3F3
+                    padding: 28px 20px
+                    border-radius: 5px
+                    p
+                        @include media(540) 
+                            flex: 1
+        .addr-hved-chc
+            .no-addr-form-wrap
+                .form
+                    --item: 2
+                    --gaptb: 25px
+                    --borderbefore: var(--text)
+                    .btn-grp
+                        margin-top: 2rem
+                        .btn
+                            --padding: 64px
+                    .billing-adddr-btn-wrap
+                        display: flex
+                        gap: 20px
+                        justify-content: space-between
+                    .billing-adddr-btn
+                        color: $primary
+                        display: inline-flex
+                        align-items: center
+                        gap: 10px
+                        path
+                            fill: $primary
+        .savd-uwqbj-sec
+            .fzamc
+                display: flex
+                justify-content: space-between
+                align-items: center
+                @include media(540) 
+                    flex-direction: column
+                    gap: 10px
+                .ttl-tkywa
+                    flex: 1
+                    padding-right: 1rem
+                    @include media(540) 
+                        padding-right: 0
+            .savd-addr-col-wrap
+                .savd-addr-col
+                    display: flex
+                    border: 1px solid #F3F3F3
+                    border-radius: 5px
+                    padding: 28px 16px
+                    gap: 13px
+                    position: relative
+                    &:not(:last-child)
+                        margin-bottom: 21px
+                    .cola-fgsqw
+                        line-height: 0
+                        input[type="radio"]
+                            @include radio(true)
+                    .colb-dtl-fwwz
+                        flex: 1
+                        color: $text
+                        font-size: 14px
+                        line-height: 18px
+                        .ahck-ttl
+                            font-size: 16px
+                            line-height: 19.68px
+                            color: $black
+                            margin-bottom: 20px
+                        .addr-erter
+                            margin-bottom: 20px
+                        .mbl-wef
+                            span
+                                color: $black
+                    .btn-etp-eew
+                        position: absolute
+                        bottom: 26px
+                        right: 20px
+                        .mbcw
+                            font-size: 15px
+                            text-transform: capitalize
+                            color: $primary
+                            &:not(:last-child)
+                                margin-right: 20px
+.checkout-tbl-xiuh
+    &.address_summ
+        .gray_fill
+            display: none
+    &.pay_summ
+        .gray_fill, .black_fill
+            display: none
+    
+    .ttl-tbl-bkfg
+        color: $black
+        margin-bottom: 16px
+        font-size: 16px
+        font-weight: 700
+    .pric-ing-gegc
+        li
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &:not(:last-child)
+                margin-bottom: 14px
+            *
+                font-size: 14px
+                line-height: 18px
+                color: $text
+    .ttl-amnt-tbl
+        border-top: 1px solid #D3D3D3
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 9px 0
+        margin: 22px 0
+        .ttl-txt,.ttl-prc-txt
+            color: $black
+            font-weight: 700
+    .btn-tbl-prc
+        &:not(:last-child)
+            margin-bottom: 10px
+    .checkbox-full 
+        margin-top: 20px

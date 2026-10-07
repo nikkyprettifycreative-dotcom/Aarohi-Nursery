@@ -1,0 +1,144 @@
+@import '../_var'
+
+.faq-secA
+    .heading
+        max-width: 410px
+        margin: 0 auto 60px
+        @include media(768)
+            margin: 0 auto 50px
+        @include media(540)
+            margin: 0 auto 40px
+        p
+            color: $text
+    .faqs-section
+        align-items: center
+        justify-content: space-around
+        gap: 50px
+        @include media(768)
+            flex-direction: column
+            gap: 30px
+        @include media(540)
+            gap: 10px
+        .colA
+            flex: 0 1 auto
+            width: 30%
+            @include media(768)
+                width: 100%
+            .ub_icon
+                mask-image: url(/assets/images/about/about_ub.svg)
+                mask-size: 100%
+                mask-repeat: no-repeat
+                height: 390px
+                width: 100%
+                line-height: 0
+                @include media(768) 
+                    width: 200px
+                    height: 225px
+                    margin: 0 auto
+                @include media(540)
+                    width: 150px
+                    height: 170px
+                video
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+        .colB
+            flex: 1
+            .col
+                --padlr: 0
+                border-radius: 10px
+                transition: .5s ease
+                margin-bottom: 10px
+                &.active
+                    .title
+                        h6
+                            color: $black
+                        .ico
+                            &::after
+                                transform: scaleY(0)
+                    article
+                        max-height: fit-content
+                        opacity: 1
+                .title
+                    @include flex
+                    overflow: hidden
+                    align-items: center
+                    padding: 15px 20px
+                    cursor: pointer
+                    transition: .5s ease
+                    border: 1px solid #ccc
+                    background-color: #E4E4E4
+                    border-radius: 5px
+                    @include media(540)
+                        padding: 10px 15px
+                    h6
+                        font-family: $Lato
+                        color: $text
+                        font-size: 16px
+                        line-height: 1.2
+                        @include font(700) 
+                        flex: 1 
+                        padding-right: 1rem
+                        transition: .5s ease
+                        @include media(540)
+                            font-size: 16px
+                        @include media(345)
+                            font-size: 14px
+                    .ico
+                        flex: 0 1 auto
+                        --size: 18px
+                        --border: 2px
+                        --bgcolor: var(--black)
+                        height: var(--size)
+                        width: var(--size)
+                        @include before(var(--bgcolor))
+                        @include after(var(--bgcolor))
+                        &::before,&::after
+                            transition: .5s ease
+                        &::before
+                            top: calc(var(--size) / 2 - var(--border) / 2)
+                            bottom: auto
+                            height: var(--border)
+                            width: 100%
+                        &::after
+                            left: calc(var(--size) / 2)
+                            translate: -50% 0 
+                            right: auto
+                            width: var(--border)
+                            height: 100%
+                article
+                    position: relative
+                    background: $white
+                    border: 1px solid #c1c1c1
+                    border-top: none
+                    max-height: 0
+                    opacity: 0
+                    overflow: hidden
+                    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out
+                    border-radius: 0 0 5px 5px 
+                    .content-desc
+                        padding: 15px 20px 20px
+                        p,ul,h2,h3,h4,h5,h6
+                            margin-bottom: 16px
+                        *
+                            &:not(button)
+                                color: $text
+                                font-size: 16px
+                                line-height: 1.5
+                        h1,h2,h3,h4,h5,h6,b
+                            color: $black
+                            @include font(500)
+                        ul
+                            padding-left: 20px
+                            li
+                                list-style: none
+                                &::before
+                                    background-color: var(--black)
+                                @include media(540)
+                                    font-size: 14px
+                                &:not(:last-child)
+                                    margin-bottom: 5px
+                        p
+                            @include media(540)
+                                font-size: 14px
+                                            

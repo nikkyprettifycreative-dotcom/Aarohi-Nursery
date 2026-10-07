@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.about-secA .flex {
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .about-secA .flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secA .flex {
+    gap: 20px;
+  }
+}
+.about-secA .flex .colA {
+  flex: 0 1 auto;
+  max-width: 30%;
+}
+.about-secA .flex .colA .ub_icon {
+  -webkit-mask-image: url(/assets/images/about/about_ub.svg);
+          mask-image: url(/assets/images/about/about_ub.svg);
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  height: 390px;
+  width: 100%;
+  line-height: 0;
+}
+@media only screen and (max-width: 768px) {
+  .about-secA .flex .colA .ub_icon {
+    height: 150px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secA .flex .colA .ub_icon {
+    height: 100px;
+  }
+}
+.about-secA .flex .colA .ub_icon video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-secA .flex .colB {
+  flex: 1;
+  max-width: 700px;
+}
+@media only screen and (max-width: 768px) {
+  .about-secA .flex .colB {
+    text-align: center;
+  }
+}
+.about-secA .flex .colB h2 {
+  margin-bottom: 20px;
+  letter-spacing: 7px;
+}
+@media only screen and (max-width: 991px) {
+  .about-secA .flex .colB h2 {
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secA .flex .colB h2 {
+    font-size: 28px;
+  }
+}
+.about-secA .flex .colB .content {
+  margin-bottom: 20px;
+  max-height: 225px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  .about-secA .flex .colB .content {
+    max-height: 100%;
+  }
+}
+.about-secA .flex .colB .content.open_height {
+  max-height: 450px;
+  overflow: auto;
+}
+.about-secA .flex .colB p {
+  padding-bottom: 15px;
+  color: var(--text);
+}
+.about-secA .flex .colB .read_more {
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .about-secA .flex .colB .read_more {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .counter-sec.about_counter .bg {
+    height: 70vh;
+  }
+}
+.counter-sec.about_counter .banner-wrapper {
+  text-align: center;
+  top: 60%;
+  translate: 0 -60%;
+}
+.counter-sec.about_counter .banner-wrapper h2 {
+  letter-spacing: 7px;
+}
+@media only screen and (max-width: 991px) {
+  .counter-sec.about_counter .banner-wrapper h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .counter-sec.about_counter .banner-wrapper h2 {
+    font-size: 24px;
+  }
+}
+.counter-sec.about_counter .banner-wrapper .subhead {
+  margin: 0 auto;
+}
+@media only screen and (max-width: 540px) {
+  .counter-sec.about_counter .banner-wrapper .subhead {
+    padding: 15px 0 20px;
+    font-size: 14px;
+  }
+}
+.counter-sec.about_counter .banner-wrapper .counter-wrapper {
+  justify-content: center;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 540px) {
+  .counter-sec.about_counter .banner-wrapper .counter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.counter-sec.about_counter .banner-wrapper .btn {
+  display: none;
+}
+.counter-sec .banner-wrapper {
+  color: var(--white);
+  line-height: 1.2;
+}
+.counter-sec .banner-wrapper h2 {
+  font-size: 36px;
+}
+.counter-sec .banner-wrapper .subhead {
+  padding: 20px 0 30px;
+  max-width: 540px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.counter-sec .banner-wrapper .counter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.counter-sec .banner-wrapper .counter-wrapper .counter-info-wrap h5 {
+  font-family: "Lato", sans-serif;
+}
+.counter-sec .banner-wrapper .counter-wrapper .counter-info-wrap p {
+  font-weight: 300;
+}/*# sourceMappingURL=about.css.map */

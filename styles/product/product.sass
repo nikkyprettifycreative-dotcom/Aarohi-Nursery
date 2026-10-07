@@ -1,0 +1,851 @@
+@import '../_var'
+@import '../_form'
+
+.prolisting-secA
+    background-color: #E8E8E8
+    .heading
+        max-width: 380px
+        margin: 0 auto
+        h2
+            font-size: 30px
+            @include media(540)
+                font-size: 24px
+        p
+            color: $text
+
+.list-filter-wrap
+    --filterheight: 45px
+    --bordercolor: #66666638
+    border-top: 1px solid #66666638
+    border-bottom: 1px solid #66666638
+    @include media-min(991)
+    position: sticky
+    top: calc(var(--headerfixed))
+    left: 0
+    right: 0 
+    z-index: 3
+    background: $white
+    height: 100%
+    @include media(991)
+        --bordercolor: #66666638
+        top: calc(var(--headerfixed) - 1px)
+        z-index: 7
+    .list-filter
+        display: flex
+        @include media(991)
+            justify-content: space-between
+        .colA
+            padding: 0 25px
+            border-right: 1px solid var(--bordercolor)
+            pointer-events: none
+            @include media(991)
+                pointer-events: all
+                padding-left: 0
+            @include media(675)
+                padding-right: 15px
+            @include media(345)
+                padding-right: 13px
+            @include media(320)
+                padding-right: 10px
+            .filtr-btn
+                height: var(--filterheight)
+                line-height: 0
+        .colB
+            flex: 1
+            @include media(991)
+                right: 0
+                transform: translateX(100%)
+                transition: .5s ease
+            &.is-open
+                @include media(991)
+                    transform: translateX(0%)
+            .close
+                @include media(991)
+                    top: 20px
+                    right: 20px
+            .fltr-ggf
+                display: flex
+                @include media(991)
+                    display: block
+                    padding: 70px 0
+                    height: 100%
+                    overflow-y: auto
+                    position: relative
+                .btn-mbl-btm
+                    display: flex
+                    position: fixed
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    z-index: 2
+                    @include media-min(991)
+                        display: none
+                    .btn
+                        flex: 1
+                        --height: 44px
+        .kmr-select-wrap
+            --labelheight: var(--filterheight)
+            padding: 0 25px
+            @include media(991)
+                width: 100%
+            &:not(.sort_by)
+                @include media-min(991)
+                    border-right: 1px solid var(--bordercolor)
+                @include media(991)
+                    border-top: 1px solid var(--bordercolor)
+                .label
+                    @include media(991)
+                        @include font(500)
+                        color: var(--black)
+                        background-image: url(/icon/arrow-down-gray.svg)
+                .kmr-select-menu
+                    &.active
+                        display: block
+                    @include media(991)
+                        position: unset
+                        width: 100%
+                        box-shadow: none
+                        padding-top: 8px
+                        padding-bottom: 8px
+                        display: block
+            &.sort_by
+                .kmr-select-menu
+                    &.active
+                        display: block
+                @include media(991)
+                    padding-right: 0
+
+.total_products
+    padding: 20px 25px
+    @include media(991)
+        padding: 20px 0 
+        display: none
+    .container
+        display: flex
+        align-items: center
+        gap: 20px
+        p
+            flex: 0 1 auto
+        .selected_pro_wraper
+            flex: 1
+            display: flex
+            align-items: center
+            gap: 10px
+            width: 100%
+            overflow-x: auto
+            .selected
+                padding: 2px 10px
+                color: $black
+                border: 1px solid $text
+                display: flex
+                align-items: center
+                gap: 6px
+                min-width: fit-content
+                font-size: 12px
+                img
+                    width: 20px
+                    height: 20px
+                    cursor: pointer
+
+.proListing_grid_wrapper
+    background-color: #FAFAFA
+    .proListing_grid
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 10px
+        padding-bottom: 50px
+        @include media(768)
+            grid-template-columns: repeat(2, 1fr)
+        @include media(540)
+            grid-template-columns: repeat(1, 1fr)
+    .load_more
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-transform: uppercase
+        gap: 10px
+        font-size: 14px
+        letter-spacing: 2px
+        color: $text
+        margin: 0 auto
+        transition: .5s ease
+        &:hover
+            color: $black
+        img
+            width: 50px
+            height: 50px
+// Product detail
+
+.product-detail-container
+    margin-top: var(--headerheight)
+    background-color: #FAFAFA
+    .breadcrumps
+        padding-top: 20px
+        li
+            display: inline-block
+            vertical-align: middle
+        li:first-child, li:last-child
+            @include media(540)
+                display: none
+        li
+            &:nth-last-child(2)
+                &::before
+                    @include media(540)
+                        display: none
+                
+        a
+            color: $text
+            font-size: 14px
+            @include media(520)
+                font-size: 12px 
+                text-overflow: ellipsis
+            &.active
+                color: var(--colortext)
+    .detail-product-wrap
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 35px
+        margin-top: 35px
+        padding-bottom: 80px
+        @include media(991)
+            grid-template-columns: repeat(1, 1fr)
+            padding-bottom: 60px
+        @include media(768)
+            padding-bottom: 40px
+        @include media(540)
+            margin-top: 15px
+            grid-gap: 20px
+            padding-bottom: 20px
+        .colA
+            .product-image-wrap
+                position: sticky
+                top: var(--headerheight)
+                display: grid
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+                grid-gap: 10px
+                @include media(768)
+                    grid-template-columns: repeat(2, 1fr)
+                .pro-img
+                    line-height: 0
+                    position: relative
+                    overflow: hidden
+                    transition: .5s ease
+                    &.videoHover 
+                        video
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+                            position: absolute
+                            left: 0
+                            top: 0
+                            z-index: -1
+                        &:hover
+                            &:hover
+                                img
+                                    transform: scale(1.2)
+                                    opacity: 0
+                    &:hover
+                        img
+                            transform: scale(1.1)
+                    img
+                        transform-origin: top left
+                        transition: 1s ease
+                        @include media(768)
+                            height: auto
+        .colB
+            padding-left: 40px
+            @include media(991)
+                padding-left: 0
+            .pro_title
+                font-size: 28px
+                font-family: $Lato
+                line-height: 1.2
+                color: #000
+                text-transform: capitalize
+                font-weight: 700
+                margin-bottom: 20px
+                @include media(768)
+                    margin-bottom: 10px
+                @include media(540)
+                    font-size: 22px
+            .review_wrap
+                display: flex
+                align-items: center
+                gap: 15px
+                margin-bottom: 20px
+                @include media(768)
+                    margin-bottom: 15px
+                .review_stars
+                    display: flex
+                    align-items: center
+                    gap: 3px
+                .review_content
+                    display: flex
+                    align-items: center
+                    p
+                        font-size: 14px 
+                        color: $text
+                        &:first-child
+                            padding-right: 10px
+                            border-right: 1px solid $text
+                        &:last-child
+                            cursor: pointer
+                            padding-left: 10px
+            .price_wrapper
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-bottom: 10px
+                .price
+                    font-size: 24px
+                    line-height: 1.2
+                    font-weight: 500
+                    @include media(540)
+                        font-size: 20px
+                .sku_code
+                    display: flex
+                    gap: 6px
+                    font-size: 14px 
+                    font-weight: 500
+                    span
+                        color: $text
+            .bulk_orders
+                margin-bottom: 20px
+                border-bottom: 1px solid #D7D7D7
+                padding-bottom: 35px
+                @include media(768)
+                    padding-bottom: 25px
+                >p
+                    font-size: 14px
+                    color: $text
+                .bulk_order_content
+                    padding-top: 15px
+                    display: flex
+                    align-items: center
+                    gap: 5px
+                    @include media(540)
+                        padding-top: 10px
+                    .bulk_wrap
+                        background: $white
+                        padding: 8px 15px
+                        border: 1px solid #E6E6E6
+                        @include media(540)
+                            flex: 1
+                        p
+                            font-size: 12px
+                            line-height: 1
+                            color: $text
+                        .price
+                            font-size: 14px
+            .select_size_wrap
+                position: relative
+                .upper_sec
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    h3
+                        font-size: 14px
+                        letter-spacing: 3px
+                        text-transform: uppercase
+                        font-family: $Lato
+                    a
+                        font-size: 14px
+                        text-decoration: underline
+                        color: $text
+                .sizes_wrapper
+                    padding: 25px 0
+                    display: flex
+                    align-items: center
+                    flex-wrap: wrap
+                    gap: 20px 7px
+                    @include media(1150)
+                        padding: 25px 0 50px
+                    @include media(991)
+                        padding: 25px 0 70px
+                    .size
+                        text-align: center
+                        p
+                            padding-bottom: 5px
+                            font-size: 14px
+                            line-height: 1.2
+                            text-transform: uppercase
+                            font-weight: 600
+                        .size_count
+                            width: 100%
+                            padding: 7px 6px
+                            border: 1px solid #B4B1B1
+                            border-radius: 5px
+                            display: flex
+                            align-items: center
+                            gap: 3px
+                            @include media(540)
+                                padding: 5px 4px
+                            button
+                                line-height: 1
+                                svg
+                                    width: 15px
+                                    height: 15px
+                            input
+                                outline: none
+                                border: none
+                                background: transparent
+                                max-width: 40px
+                                padding: 0 5px
+                                line-height: 1
+                                height: 30px
+                                text-align: center
+                                @include media(540)
+                                    max-width: 30px
+                                    height: 25px
+                .add_to_wish
+                    display: flex
+                    align-items: center
+                    position: absolute
+                    right: 0%
+                    bottom: 10%
+                    transform: translate(0%, 10%)
+                    @include media(1150)
+                        bottom: 5%
+                    @include media(991)
+                        bottom: 10%
+                    .wish_btn
+                        display: flex
+                        align-items: center
+                        gap: 10px
+                        padding-right: 10px
+                        border-right: 1px solid #00000045
+                        &.added
+                            svg
+                                path 
+                                    fill: $black
+                    .share
+                        padding-left: 10px
+                        position: relative
+                        svg
+                            width: 30px
+                            height: 30px
+                        .social_icons
+                            background: $white
+                            border-radius: 5px
+                            padding: 10px 7px
+                            position: absolute
+                            bottom: 100%
+                            display: flex
+                            flex-direction: column
+                            gap: 5px
+                            transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out
+                            transform-origin: bottom
+                            margin-bottom: 10px
+                            transform: scale(0.75) translateY(10px)
+                            opacity: 0
+                            &.is-open
+                                opacity: 1
+                                transform: scale(1) translateY(0)
+                                pointer-events: all
+                            svg
+                                width: 20px
+                                height: 20px
+            .btn_wrapper
+                display: flex
+                align-items: center
+                gap: 10px
+                @include media(540)
+                    position: fixed
+                    bottom: 0
+                    left: 0
+                    width: 100%
+                    gap: 0
+                    z-index: 2
+                button
+                    --height: 46px
+                    flex: 1
+                    width: 100%
+                    text-transform: capitalize
+                    letter-spacing: normal
+                    font-size: 16px
+                    font-weight: 700
+                    &.black
+                        background: $black
+                        color: $white
+                        border: 1px solid $black 
+                        &:hover
+                            padding: 0
+                            background: transparent
+                            color: $black
+                    &.gray
+                        background: #D7D2D2
+                        color: $black
+                        border: 1px solid #D7D2D2
+                        svg
+                            display: none
+                            transition: .5s ease
+                        &.active
+                            svg
+                                display: block
+                        &:hover
+                            padding: 0
+                            background: $white
+                            border-color: $black
+                            color: $black
+            .pro_description
+                padding: 40px 0 20px
+                @include media(768)
+                    padding: 30px 0 20px
+                .col
+                    --padlr: 0
+                    transition: .5s ease
+                    &.active
+                        .title
+                            h6
+                                color: $black
+                            .icon
+                                &::after
+                                    transform: scaleY(0)
+                        article
+                            max-height: fit-content
+                            opacity: 1
+                    .title
+                        display: flex
+                        flex-wrap: wrap
+                        align-items: center
+                        overflow: hidden
+                        padding: 15px 0
+                        cursor: pointer
+                        transition: .5s ease
+                        border-bottom: 1px solid #D1D1D1
+                        h6
+                            font-family: $Lato
+                            font-size: 14px
+                            line-height: 1.2
+                            color: $text
+                            flex: 1
+                            text-transform: uppercase
+                            letter-spacing: 2px
+                            font-weight: 500
+                            padding-right: 1rem
+                            transition: .5s ease
+                        .icon
+                            flex: 0 1 auto
+                            --size: 18px
+                            --border: 2px
+                            --bgcolor: var(--black)
+                            height: var(--size)
+                            width: var(--size)
+                            position: relative
+                            @include before(var(--black))
+                            @include after(var(--black))
+                            &::before
+                                top: calc(var(--size) / 2 - var(--border) / 2)
+                                bottom: auto
+                                height: var(--border)
+                                width: 100%
+                            &::after
+                                left: calc(var(--size) / 2)
+                                translate: -50% 0
+                                right: auto
+                                width: var(--border)
+                                height: 100%
+                    article
+                        position: relative
+                        border-bottom: 1px solid #D1D1D1
+                        max-height: 0
+                        opacity: 0
+                        overflow: hidden
+                        transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out
+                        .content-desc
+                            padding: 20px 0
+            .col-itqeq
+                display: flex
+                .rgcwv
+                    flex: 1
+                    padding: 10px 43px
+                    text-align: center
+                    &:not(:last-child)
+                        border-right: 1px solid #CFCFCF
+                    @include media(540)
+                        padding: 0 8px
+                    .ico
+                        line-height: 0
+                        margin-bottom: 15px
+                        @include media(540)
+                            margin-bottom: 10px
+                        img
+                            width: 40px
+                            @include media(540)
+                                width: 35px
+                    p
+                        font-size: 13px
+                        line-height: 15px
+                        text-transform: uppercase
+                        color: $text       
+
+.customer_reviews
+    .heading
+        margin-bottom: 50px
+        @include media(768)
+            margin-bottom: 40px
+    .review_wrapper
+        @include media(768)
+            flex-direction: column
+        .colA, .colB
+            flex: 1    
+        .colA
+            .review-border
+                border-right: 1px solid #00000026
+                @include media(768)
+                    border-right: none
+                .review_content
+                    margin-right: -4px
+                    height: 500px
+                    overflow-y: auto
+                    @include media(768)
+                        margin-right: 0
+                        height: 100%
+                        overflow-y: visible
+                    &::-webkit-scrollbar
+                        width: 8px
+                        height: 4px
+                    &::-webkit-scrollbar-thumb
+                        background-color: #D9D9D9
+                    .review_box
+                        display: flex
+                        gap: 15px
+                        margin-bottom: 40px
+                        @include media(768)
+                            margin-bottom: 25px
+                        figure
+                            width: 60px
+                            height: 60px
+                            flex: 0 1 auto
+                            @include media(768)
+                                width: 50px
+                                height: 50px
+                            img
+                                height: 100%
+                                border-radius: 50%
+                        figcaption
+                            flex: 1
+                            h6
+                                font-size: 18px
+                            .review_stars
+                                padding: 5px 0 
+                                display: flex
+                                align-items: center
+                                gap: 5px
+                            p
+                                max-width: 400px
+                                color: $text
+                                font-size: 14px
+                            time
+                                display: block
+                                font-size: 14px
+                                color: #A4A4A4
+                                margin-top: 10px
+        .colB
+            .review_form
+                padding: 30px 70px
+                @include media(991)
+                    padding: 30px 40px
+                @include media(768)
+                    padding: 30px 0 
+                @include media(540)
+                    padding: 20px 0 
+                h6
+                    font-size: 24px
+                    font-family: $Lato
+                .rating
+                    display: flex
+                    align-items: center
+                    gap: 20px
+                    .give_reviews
+                        display: flex
+                        align-items: center
+                        gap: 7px
+                        li
+                            height: 16px
+                            cursor: pointer
+                            &:hover, &.active
+                                svg
+                                    path 
+                                        fill: #000
+                            svg
+                                width: 16px
+                                height: 16px
+                                transition: .5s ease
+                .black_fill
+                    width: fit-content
+                    padding: 0 20px
+.custom-pop
+    right: 0
+    transform: translateX(100%)
+    transition: .5s ease
+    background: $white
+    &.is-open
+        transform: translateX(0%)
+    .model-body
+        padding: 60px 35px 30px
+        height: 100%
+        overflow-y: auto
+        @include scrollbar(3px,$white,#5e5e5e,8px)
+        @include media(675)
+            padding: 70px 20px 30px
+        .title
+            text-align: center
+            margin-bottom: 2rem
+            h4
+                font-size: 32px
+                color: $black
+                @include font(500)
+            p
+                color: $text
+                margin-top: 10px
+                font-size: 14px
+                line-height: 20px
+                max-width: 317px
+                margin-left: auto
+                margin-right: auto
+                @include media(675)
+                    font-size: 14px
+                    max-width: 300px
+        .form
+            --gaptb: 15px
+
+.custom-pop
+    right: 0
+    max-width: 600px
+    transform: translateX(100%)
+    transition: .5s ease
+    background: $white
+    &.is-open
+        transform: translateX(0%)
+    .model-body
+        padding: 60px 35px 30px
+        height: 100%
+        overflow-y: auto
+        @include scrollbar(3px,$white,#5e5e5e,8px)
+        @include media(675)
+            padding: 70px 20px 30px
+        .title
+            text-align: center
+            margin-bottom: 2rem
+            h4
+                font-size: 32px
+                color: $black
+                @include font(500)
+            p
+                color: $text
+                margin-top: 10px
+                font-size: 14px
+                line-height: 20px
+                max-width: 317px
+                margin-left: auto
+                margin-right: auto
+                @include media(675)
+                    font-size: 14px
+                    max-width: 300px
+        .form
+            --gaptb: 15px
+            --item: 2
+            .front_img
+                background-color: #6666660f
+                padding: 0 10px
+                &::before, &::after
+                    display: none
+                .file-name
+                    --filename: "Front Image"
+            .back_img
+                background-color: #6666660f
+                padding: 0 10px
+                &::before, &::after
+                    display: none
+                .file-name
+                    --filename: "Back Image"
+            .rightside_img
+                background-color: #6666660f
+                padding: 0 10px
+                &::before, &::after
+                    display: none
+                .file-name
+                    --filename: "Right Side Image"
+            .leftside_img
+                background-color: #6666660f
+                padding: 0 10px
+                &::before, &::after
+                    display: none
+                .file-name
+                    --filename: "Left Side Image"
+
+.model.embroidery-pop
+    height: fit-content
+    max-width: 450px 
+    top: unset
+    bottom: 0%
+    left: 50%
+    transform: translate(-50%, 100%)
+    transition: .5s ease
+    &.guide 
+        max-width: fit-content
+        .model-body
+            h6
+                padding-bottom: 10px
+            img
+                height: 100%
+    &.is-open
+        bottom: 50%
+        transform: translate(-50%, 50%)
+    .close
+        top: 20px
+        right: 20px
+        svg
+            width: 20px
+            height: 20px
+    .model-body
+        padding: 20px 25px
+        h6
+            font-size: 16px
+            font-family: $Lato
+            font-weight: 700
+        .form-group
+            padding: 15px 25px
+            margin: 15px 0 20px
+            border-radius: 5px
+            position: relative
+            width: fit-content
+            border: 1px dashed $black
+            &::before
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+                background: url(/assets/icon/add.svg) no-repeat
+                width: 100%
+                height: 100%
+                background-position: 5% 50%
+            p
+                color: $text
+                padding-left: 30px
+            input
+                width: 100%
+                height: 100%
+                position: absolute
+                left: 0
+                top: 0
+                opacity: 0
+        p
+            color: $text
+            strong
+                color: $black
+        .btn_wrapper
+            display: flex
+            align-items: center
+            gap: 20px
+            margin-top: 20px
+        .btn
+            padding: 0 20px
+            --height: 32px
+        .embroidery
+            font-size: 14px
+            color: $text
+            text-decoration: underline
