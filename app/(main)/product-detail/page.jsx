@@ -76,12 +76,12 @@ export default function ProductDetail(){
                         <div className="colA">
                             <div className="product-image-wrap">
                                 <ProductDimage 
-                                    classname="videoHover"
+                                    // classname="videoHover"
                                     mainImg="/assets/images/product/areca.jpg"
 
                                     zoomImg="/assets/images/product/areca.jpg"
                                     videoSrc="/assets/images/category/bg.mp4"
-                                    frameSrc="https://player.vimeo.com/video/781627907?h=2a86cb4c12"
+                                    // frameSrc="https://player.vimeo.com/video/781627907?h=2a86cb4c12"
                                 />
                                 <ProductDimage
                                     mainImg="/assets/images/product/snake.jpg"
@@ -471,7 +471,7 @@ export default function ProductDetail(){
             <BestSellerSlider heading="related products" />
             <EmbroideryPop markAsAdded={() => setIsGiftWrapped(true)} />
             <EmbroidGuide />
-            <VideoPopup />
+            {/* <VideoPopup /> */}
         </main>
     )
 }
