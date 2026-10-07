@@ -75,7 +75,7 @@ export default function Footer(){
                             <div className="list_item">
                                 <h6>Company</h6>
                                 <ul>
-                                    ok one
+                                    {/* ok one */}
                                     {/* <li><Link href="/about-us">About us</Link></li>
                                     <li><Link href="/contact-us">Contact us</Link></li>
                                     <li><Link href="/faqs">FAQ’s</Link></li>
