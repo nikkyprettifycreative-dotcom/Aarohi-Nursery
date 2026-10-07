@@ -64,32 +64,49 @@ export default function Footer(){
                             <div className="list_item">
                                 <h6>Products</h6>
                                 <ul>
-                                    <li><Link href="/product-listing">Corporate</Link></li>
-                                    <li><Link href="/product-listing">Hotel</Link></li>
-                                    <li><Link href="/product-listing">SPA & Salon</Link></li>
-                                    <li><Link href="/product-listing">Industrial</Link></li>
-                                    <li><Link href="/product-listing">Security</Link></li>
-                                    <li><Link href="/product-listing">Hospital</Link></li>
+                                    <li><Link href="/product-listing">Indoor Plants</Link></li>
+                                    <li><Link href="/product-listing">Outdoor Plants</Link></li>
+                                    <li><Link href="/product-listing">Flowering Plants</Link></li>
+                                    <li><Link href="/product-listing">Medicinal & Herbal</Link></li>
+                                    <li><Link href="/product-listing">Seeds & Bulbs</Link></li>
+                                    <li><Link href="/product-listing">Pots & Planters</Link></li>
                                 </ul>
                             </div>
                             <div className="list_item">
                                 <h6>Company</h6>
                                 <ul>
-                                    <li><Link href="/about-us">About us</Link></li>
+                                    ok one
+                                    {/* <li><Link href="/about-us">About us</Link></li>
                                     <li><Link href="/contact-us">Contact us</Link></li>
                                     <li><Link href="/faqs">FAQ’s</Link></li>
                                     <li><Link href="/careers">Careers</Link></li>
-                                    <li><Link href="/blogs">Blogs</Link></li>
+                                    <li><Link href="/blogs">Blogs</Link></li> */}
+
+                                    <li><Link href="">About us</Link></li>
+                                    <li><Link href="">Contact us</Link></li>
+                                    <li><Link href="">FAQ’s</Link></li>
+                                    <li><Link href="">Careers</Link></li>
+                                    <li><Link href="">Blogs</Link></li>
                                 </ul>
                             </div>
                             <div className="list_item">
                                 <h6>Legal</h6>
                                 <ul>
-                                    <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                                    {/* <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                                     <li><Link href="/terms-and-conditions">Terms and Conditions</Link></li>
                                     <li><Link href="/shipping-and-delivery">Shipping & Delivery</Link></li>
                                     <li><Link href="/return-and-exchange">Returns & Exchanges</Link></li>
-                                    <li><Link href="/assets/images/Measurment_Chart.pdf" target="_blank">Size Guide</Link></li>
+                                    <li><Link href="/assets/images/Measurment_Chart.pdf" target="_blank">Size Guide</Link></li> */}
+
+
+                                    <li><Link href="">Privacy Policy</Link></li>
+                                    <li><Link href="">Terms and Conditions</Link></li>
+                                    <li><Link href="">Shipping & Delivery</Link></li>
+                                    <li><Link href="">Returns & Exchanges</Link></li>
+                              
+
+
+                                  
                                 </ul>
                             </div>
                         </div>
