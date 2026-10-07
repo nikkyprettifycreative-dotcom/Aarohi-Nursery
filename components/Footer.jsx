@@ -36,7 +36,7 @@ export default function Footer(){
                     <Image src="/assets/icon/world.svg" width="40" height="40" alt="Pan Delivery Icon" />
                     <div className="content">
                         <h6>PAN INDIA DELIVERY</h6>
-                        <p>Get your uniform delivered at your doorstep.</p>
+                        <p>Get your Plant delivered at your doorstep.</p>
                     </div>
                 </div>
                 <div className="add_item">
