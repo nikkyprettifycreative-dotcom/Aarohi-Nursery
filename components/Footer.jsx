@@ -125,12 +125,12 @@ export default function Footer(){
                                 <li><Link href="tel:+91XXXXXXXXXX">XXXXXXXXXX</Link></li>
                             </ul>
                         </div>
-                        <div className="colD flex">
+                        {/* <div className="colD flex">
                             <Link href="">
                             <Image src="/assets/icon/whatsapp.svg" width="18" height="18" alt="Whatsapp icon"></Image> Whatsapp</Link>
                             <Link href="/pay-online">Pay Online</Link>
                             <button className="corp_login" onClick={openLogin}>Corporate Login</button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="footer_rights">
